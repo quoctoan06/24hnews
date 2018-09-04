@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_45sdp">
+
+            <ImageView
+                android:id="@+id/img_main_menu"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_menu_white_24dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/tv_title_main_menu"
+                android:layout_centerInParent="true"
+                android:textColor="@android:color/white"
+                android:text="Tiêu đề"
+                android:textStyle="bold"
+                android:textSize="@dimen/_13sdp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" /> <!--wrap-content: dãn theo nội dung-->
+        </RelativeLayout>
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:id="@+id/swipeRefreshLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_post"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            </android.support.v7.widget.RecyclerView>
+        </android.support.v4.widget.SwipeRefreshLayout> <!--kéo để cập nhật các bài viết mới-->
+    </LinearLayout>     <!--LinearLayout: các item không đè lên nhau-->
+
+</android.support.constraint.ConstraintLayout>
